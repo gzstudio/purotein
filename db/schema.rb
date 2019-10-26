@@ -10,26 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_26_032410) do
+ActiveRecord::Schema.define(version: 2019_10_26_041742) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "brands", force: :cascade do |t|
+    t.string "brand_name"
+    t.string "brand_img"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "products", force: :cascade do |t|
-    t.string "product_name"
-    t.integer "brand_id"
-    t.string "product_img"
-    t.integer "calorie"
-    t.integer "protein"
-    t.integer "carb"
-    t.integer "fat"
+    t.text "product_name"
+    t.bigint "brand_id", null: false
+    t.text "product_image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["brand_id"], name: "index_products_on_brand_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,4 +40,5 @@ ActiveRecord::Schema.define(version: 2019_10_26_032410) do
     t.string "remember_digest"
   end
 
+  add_foreign_key "products", "brands"
 end

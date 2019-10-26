@@ -1,0 +1,24 @@
+<% provide(:title, "Add Snack") %>
+<section class="main-content">
+<h1>Add Snack</h1>
+<div class="row">
+    <%= form_for @product do |f| %>
+        <div class="form-group">
+            <%= f.label :product_name %>
+            <%= f.text_field :product_name %>
+        </div>
+        <div class="form-group">
+            <%= f.label :brand %>
+            <%= f.text_field :brand %>
+        </div>
+        <div class="form-group">
+            <%= f.label :product_image %>
+            <%= f.text_field :product_image %>
+        </div>
+        <div class="form-group">
+            <%= f.submit "Add snack", class: "btn btn-primary" %>
+        </div>
+    <% end %>
+
+</div>
+</section>
