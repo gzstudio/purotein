@@ -1,0 +1,13 @@
+<% @brands.each do |brand| %>
+    <p>
+        <%= brand.id %>
+        <%if brand.img.present? %>
+            <%= image_tag brand.image, width: '90px' %>
+        <% end %>
+        <%= brand.name %>
+    </p>
+    <div class="controls">
+    <%= link_to 'Edit', edit_brand_path(brand) %>
+    <%= link_to 'Delete', brand_path(brand.id), :method => 'delete', :data => { :confirm => 'Are you sure?'}  %>
+    </div>
+<% end %>

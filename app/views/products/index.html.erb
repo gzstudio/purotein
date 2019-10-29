@@ -1,18 +1,9 @@
 <section class="main-content">
-    <div class="text-center">
-
-        <h1>Purotein</h1>
-        <p>Welcome to Purotein, an app that help you find the best protein snack!<br/>
-        Sign up to build up your favourite list!</p>
-
-        <%= link_to "Log in", '/login', class: "btn btn-lg btn-primary" %>
-        <%= link_to "Sign up", '/signup', class: "btn btn-lg btn-primary" %>
-    </div>
-
-    <% @products.each do | product| %>
+<h1> All Snacks </h1>
+<% @products.each do | product| %>
     <div class ="row">
-        <div class="col-2">
-            <%= link_to image_tag product.product_image, :class => 'img-fluid'if product.product_image.present?  %>
+        <div class="col-2">            
+            <%= link_to image_tag(product.product_image, :class => 'img-fluid'), product %>
         </div>
         <div class ="col-10">
             <h4><%= link_to product.product_name, product %></h4>
@@ -40,8 +31,4 @@
         </div>
         </div>
 <% end %> 
-</div>
-
-
-</div>
-<section>
+</section>

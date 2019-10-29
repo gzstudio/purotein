@@ -1,0 +1,38 @@
+<% provide(:brand, @product.brand.name) %>
+<% provide(:brand_id, @product.brand.id) %>
+<% provide(:product, @product.product_name) %>
+
+<section class="main-content">
+<%
+=begin%>
+ <%= render 'layouts/breadcrumb' %> 
+<%
+=end%>
+<div class="row">
+    <div class="col-6">
+         <%= image_tag @product.product_image, :class => "img-fluid" if @product.product_image.present?  %>
+    </div>
+    <div class="col-6">
+        <h1><%= @product.product_name %> </h1>
+        <h5><%= link_to @product.brand.name, @product.brand %></h5>
+
+        <h3>Nutritions</h3>
+            <p>Calorie: <%= @product.calorie %></p>
+            <p>Protien: <%= @product.protein %></p>
+            <p>Carb: <%= @product.carb %></p>
+            <p>Fat: <%= @product.fat %> </p>
+        </div>
+
+        
+</div>
+
+
+    
+    <div class="controls">
+    <%= link_to 'Edit', edit_product_path(@product) %>  |  
+    <%= link_to 'Delete', product_path(@product.id), :method => 'delete', :data => { :confirm => 'Are you sure?'}  %>
+    </div>
+
+
+
+</section>

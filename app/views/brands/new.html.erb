@@ -2,19 +2,6 @@
 <section class="main-content">
 <h1>Add Brand</h1>
 <div class="row">
-    <%= form_for @brand do |f| %>
-        <div class="form-group">
-            <%= f.label :name %>
-            <%= f.text_field :name %>
-        </div>
-        <div class="form-group">
-            <%= f.label :img %>
-            <%= f.text_field :img %>
-        </div>
-        <div class="form-group">
-            <%= f.submit "Add brand", class: "btn btn-primary" %>
-        </div>
-    <% end %>
-
+    <%= render :partial => 'form' %>
 </div>
 </section>

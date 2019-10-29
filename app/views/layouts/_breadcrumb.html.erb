@@ -1,0 +1,11 @@
+<nav aria-label="breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/products">All snacks</a></li>
+            <li class="breadcrumb-item">
+            <%= link_to @brand.id, @brand.name %>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page"><%= yield(:product) %></li>
+        </ol>
+  </div>
+</nav>

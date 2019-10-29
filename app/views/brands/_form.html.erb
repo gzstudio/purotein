@@ -1,0 +1,13 @@
+<%= form_for @brand do |f| %>
+    <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+    <div class="form-group">
+        <%= f.label :img %>
+        <%= f.file_field :img %>
+    </div>
+    <div class="form-group">
+        <%= f.submit "Submit", class: "btn btn-primary" %>
+    </div>
+<% end %>
