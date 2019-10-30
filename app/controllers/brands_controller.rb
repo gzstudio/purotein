@@ -17,6 +17,10 @@ class BrandsController < ApplicationController
         redirect_to brands_path
     end
     
+    def edit
+        brand = Brand.find(params[:id])
+    end
+
     def update
         brand = Brand.find params[:id]
         brand.update brand_params

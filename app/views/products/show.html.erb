@@ -10,7 +10,7 @@
 =end%>
 <div class="row">
     <div class="col-6">
-         <%= image_tag @product.product_image, :class => "img-fluid" if @product.product_image.present?  %>
+        <%= image_tag(@product.image, :class => "img-fluid") if @product.product_image.present? %>
     </div>
     <div class="col-6">
         <h1><%= @product.product_name %> </h1>
