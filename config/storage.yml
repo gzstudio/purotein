@@ -12,7 +12,7 @@ amazon:
   access_key_id: <%= ENV['AKIA2YLAFDZONT44PGLT'] %>
   secret_access_key: <%= ENV['0dKAbZw3RxaUwIm4/REVNczSi9/eoBLeH6vPtke1'] %>
   region: us-east-2
-  bucket: <%= ENV['purotein'] %>
+  bucket: purotein
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
