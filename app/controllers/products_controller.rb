@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+before_action :logged_in_user, only: [:edit, :update, :destroy]
 
     def index
         @products = Product.all
@@ -33,7 +34,6 @@ class ProductsController < ApplicationController
         product.destroy
         redirect_to products_path
     end
-
 
     private
     def product_params

@@ -9,8 +9,10 @@
         <% end %>
         <%= brand.name %>
     </p>
+    <% if logged_in? %>
     <div class="controls">
     <%= link_to 'Edit', edit_brand_path(brand) %>
     <%= link_to 'Delete', brand_path(brand.id), :method => 'delete', :data => { :confirm => 'Are you sure?'}  %>
     </div>
+    <% end %>
 <% end %>

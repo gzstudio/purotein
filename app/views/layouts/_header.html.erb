@@ -8,9 +8,11 @@
       <div class="collapse navbar-collapse" id="navbarSupportedCont">
         <ul class="navbar-nav mr-auto">
           <li><%= link_to "all snacks",   '/products' , class: "nav-link" %></li>
-          <li><%= link_to "+ add snack",   '/add-snack' , class: "nav-link" %></li>
           <% if logged_in? %>
-            <li><%= link_to @user.name, '#', class: "nav-link" %></li>
+          <li><%= link_to "+ add snack",   '/add-snack' , class: "nav-link" %></li>
+          <% end %>
+          <% if logged_in? %>
+            <li><%= link_to @user , user_path(current_user), class: "nav-link" %></li>
             <li><%= link_to "log out", '/logout' , class: "nav-link" %></li>
           <% else %>
             <li><%= link_to "log in", '/login' , class: "nav-link" %></li>

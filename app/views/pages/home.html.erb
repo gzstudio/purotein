@@ -8,7 +8,7 @@
         <%= link_to "Log in", '/login', class: "btn btn-lg btn-primary" %>
         <%= link_to "Sign up", '/signup', class: "btn btn-lg btn-primary" %>
     </div>
-
+    <hr/>
     <% @products.each do | product| %>
     <div class ="row">
         <div class="col-2"> 
@@ -33,11 +33,12 @@
             </div>
         </div>
        
-
+        <% if logged_in? %>
         <div class="controls">
         <%= link_to 'Edit', edit_product_path(product) %>  |  
         <%= link_to 'Delete', product_path(product.id), :method => 'delete', :data => { :confirm => 'Are you sure?'}  %>
         </div>
+        <% end %>
         </div>
 <% end %> 
 </div>
