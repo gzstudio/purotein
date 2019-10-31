@@ -1,5 +1,17 @@
 <section class="main-content">
+<% if logged_in? %>
     <div class="text-center">
+
+        <h1>Purotein</h1>
+        <p>Welcome to Purotein, an app that help you find the best protein snack!<br/>
+        Sign up to build up your favourite list!</p>
+
+        
+    </div>
+    
+    <hr/>
+<% else %>
+        <div class="text-center">
 
         <h1>Purotein</h1>
         <p>Welcome to Purotein, an app that help you find the best protein snack!<br/>
@@ -8,7 +20,8 @@
         <%= link_to "Log in", '/login', class: "btn btn-lg btn-primary" %>
         <%= link_to "Sign up", '/signup', class: "btn btn-lg btn-primary" %>
     </div>
-    <hr/>
+    <% end %>
+
     <% @products.each do | product| %>
     <div class ="row">
         <div class="col-2"> 
