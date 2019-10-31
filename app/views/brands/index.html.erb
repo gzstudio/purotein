@@ -4,9 +4,18 @@
 <% @brands.each do |brand| %>
     <p>
         <%= brand.id %>
-        <%if brand.img.present? %>
+
+        <img src="<%= brand.img %>" />
+        <%
+=begin%>
+  <%if brand.img.present? %>
             <%= image_tag brand.image, width: '90px' %>
         <% end %>
+<%
+=end%>
+        
+
+
         <%= brand.name %>
     </p>
     <% if logged_in? %>

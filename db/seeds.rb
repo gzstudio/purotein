@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Brand.create(name: 'Quest', img: 'https://purotein.s3-ap-southeast-2.amazonaws.com/brand/quest_logo.png')
+Brand.create(name: 'Musashi', img: 'https://purotein.s3-ap-southeast-2.amazonaws.com/brand/mushashi_logo.png')
