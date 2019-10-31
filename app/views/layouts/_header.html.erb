@@ -2,10 +2,10 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
       <%= link_to "PUROTEIN", root_path, id: "logo", class: "navbar-brand" %>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedCont">
+      <div class="collapse navbar-collapse" id="main-nav">
         <ul class="navbar-nav mr-auto">
           <li><%= link_to "all snacks",   '/products' , class: "nav-link" %></li>
           <% if logged_in? %>
