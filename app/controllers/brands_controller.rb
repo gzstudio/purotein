@@ -13,7 +13,7 @@ class BrandsController < ApplicationController
     
     def create
         brand = Brand.create brand_params
-        brand.image.attach(params[:brand][:img])
+        brand.img.attach(params[:brand][:img])
         redirect_to brands_path
     end
     

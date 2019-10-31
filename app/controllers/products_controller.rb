@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
 
     def create
         product = Product.create product_params
-        product.image.attach(params[:product][:product_image])
+        product.product_image.attach(params[:product][:product_image])
         redirect_to products_path
     end
 
