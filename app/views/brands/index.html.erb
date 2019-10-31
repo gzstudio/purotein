@@ -5,14 +5,11 @@
     <p>
         <%= brand.id %>
 
-        <img src="<%= brand.img %>" />
-        <%
-=begin%>
+        
   <%if brand.img.present? %>
-            <%= image_tag brand.image, width: '90px' %>
+            <%= image_tag brand.img, width: '90px' %>
         <% end %>
-<%
-=end%>
+
         
 
 
