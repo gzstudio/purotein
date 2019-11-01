@@ -1,5 +1,61 @@
 @import "bootstrap";
 
+.jap{font-family: 'Kosugi Maru', sans-serif; font-size:60px;}
+.tag{font-size: 16px; text-transform: uppercase; letter-spacing: 8px; color:#666;}
+body{font-family: 'Work Sans', sans-serif;background-color:#FDC544;}
+
 .main-content {
     padding-top:60px;
+}
+
+.intro {
+    padding-bottom: 20px;
+}
+
+.product-name {
+    font-size: 24px;
+    margin-bottom: 0px;
+    a {
+        color:#46423E;
+    }
+    a:hover{
+        color:#46423E;
+    }
+}
+
+img{
+    border-radius: 4px;
+    box-shadow: #DCA830 5px 7px 14px;
+}
+
+.big-img{
+    margin-bottom: 8px;
+}
+
+.product-details{
+    padding-top:20px;
+}
+
+.product-wrapper{
+    padding-bottom: 12px;
+}
+
+a{
+    color: #DB3030;
+}
+a:hover{
+    color: #892121;
+}
+
+.padding20 {
+    padding-bottom:20px;
+}
+
+.controls {
+    width: 100%;
+    text-align: right;
+}
+
+.controls a{
+    color: #56473C;
 }

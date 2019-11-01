@@ -1,33 +1,33 @@
 <%= form_for @product do |f| %>
-        <div class="form-group">
-            <%= f.label :product_name %>
+        <div class="form-group ">
+            <%= f.label :product_name, class: "col-4" %>
             <%= f.text_field :product_name %>
         </div>
         <div class="form-group">
-            <%= f.label :brand_id %>
+            <%= f.label :brand_id, class: "col-4" %>
             <%= f.select :brand_id, Brand.pluck(:name, :id), :include_blank => true %>
         </div>
         <div class="form-group">
-            <%= f.label :product_image %>
-            <%= f.file_field :product_image %>
+            <%= f.label :product_image, class: "col-4" %>
+            <%= f.file_field :product_image , class: "col-6"%>
         </div>
         <div class="form-group">
-            <%= f.label :calorie %>
+            <%= f.label :calorie, class: "col-4" %>
             <%= f.text_field :calorie %>
         </div>
         <div class="form-group">
-            <%= f.label :protein %>
+            <%= f.label :protein, class: "col-4" %>
             <%= f.text_field :protein %>
         </div>
         <div class="form-group">
-            <%= f.label :carb %>
+            <%= f.label :carb, class: "col-4" %>
             <%= f.text_field :carb %>
         </div>        
         <div class="form-group">
-            <%= f.label :fat %>
+            <%= f.label :fat, class: "col-4" %>
             <%= f.text_field :fat %>
         </div>
-        <div class="form-group">
+        <div class="form-group col-4">
             <%= f.submit "Submit", class: "btn btn-primary" %>
         </div>
     <% end %>

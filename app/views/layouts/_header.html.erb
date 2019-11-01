@@ -1,14 +1,15 @@
   <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <%= link_to "PUROTEIN", root_path, id: "logo", class: "navbar-brand" %>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
       <div class="collapse navbar-collapse" id="main-nav">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav ml-auto">
+        <% if logged_in? %>
           <li><%= link_to "all snacks",   '/products' , class: "nav-link" %></li>
-          <% if logged_in? %>
+          
           <li><%= link_to "+ add snack",   '/add-snack' , class: "nav-link" %></li>
           <% end %>
           <% if logged_in? %>

@@ -14,9 +14,9 @@
     </div>
     <div class="col-6">
         <h1><%= @product.product_name %> </h1>
-        <h5><%= link_to @product.brand.name, @product.brand %></h5>
-
-        <h3>Nutritions</h3>
+        <h5 class="padding20"><%= link_to @product.brand.name, @product.brand %></h5>
+    
+        <h4>Nutritions</h4>
             <p>Calorie: <%= @product.calorie %></p>
             <p>Protien: <%= @product.protein %></p>
             <p>Carb: <%= @product.carb %></p>

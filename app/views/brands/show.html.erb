@@ -1,10 +1,10 @@
 <section class="main-content">
-    <h1> <%= @brand.name %>'s snacks </h1>
+    <h2 class="padding20"> <%= @brand.name %>'s snacks </h2>
     <div class="row">
         <% @brand.products.each do |product| %>
         <div class="col-3">
-           <%= link_to image_tag(product.product_image, :class => "img-fluid"), product %>
-            <%= link_to product.product_name, product %>
+           <%= link_to image_tag(product.product_image, :class => "img-fluid big-img"), product %>
+            <h5><%= link_to product.product_name, product, :class=>"padding20" %></h5>
         </div>
     <% end %>
     </div>

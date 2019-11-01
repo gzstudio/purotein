@@ -1,37 +1,4 @@
 <section class="main-content">
-<h1> All Snacks </h1>
-<% @products.each do | product| %>
-    <div class ="row">
-        
-
-
-        <div class="col-2">            
-           <%= link_to image_tag(product.product_image, :class => "img-fluid"), product %>
-        </div>
-        <div class ="col-10">
-            <h4><%= link_to product.product_name, product %></h4>
-            <%= link_to product.brand.name, product.brand %>
-            <div class="row">
-                <div class="col-1">
-                    <span>Cal</span> <%= product.calorie %> 
-                </div>
-                <div class="col-1">
-                    <span>Protein</span> <%= product.protein %>
-                </div>
-                <div class="col-1">
-                    <span>Carb</span> <%= product.carb %>
-                </div>
-                <div class="col-1">
-                    <span>Fat</span> <%= product.fat %>
-                </div>
-            </div>
-        </div>
-       
-
-        <div class="controls">
-        <%= link_to 'Edit', edit_product_path(product) %>  |  
-        <%= link_to 'Delete', product_path(product.id), :method => 'delete', :data => { :confirm => 'Are you sure?'}  %>
-        </div>
-        </div>
-<% end %> 
+<h2 class="padding20"> All Snacks </h2>
+<%= render :partial => 'products/product_list' %>
 </section>
