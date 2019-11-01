@@ -9,7 +9,7 @@ gem 'rails', '~> 6.0.0'
 gem 'pg', '>= 0.18', '< 2.0'
 
 gem 'carrierwave'
-
+gem 'bootstrap_form'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

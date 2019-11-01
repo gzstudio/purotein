@@ -3,21 +3,21 @@
 <h2 class="padding20">Sign up</h2>
 <div class="row">
     <%= form_with(model: @user, local: true) do |f| %>
-        <div class="form-group">
+        <div class="form-group form-inline">
             <%= f.label :name, class: "col-4" %>
-            <%= f.text_field :name %>
+            <%= f.text_field :name ,class: "form-control col-8"%>
         </div>
-        <div class="form-group">
+        <div class="form-group form-inline">
             <%= f.label :email, class: "col-4"  %>
-            <%= f.email_field :email %>
+            <%= f.email_field :email, class: "form-control col-8" %>
         </div>
-        <div class="form-group">
+        <div class="form-group form-inline">
             <%= f.label :password, class: "col-4"  %>
-            <%= f.password_field :password %>
+            <%= f.password_field :password ,class: "form-control col-8"%>
         </div>
-        <div class="form-group">
+        <div class="form-group form-inline">
             <%= f.label :password_confirmation, "Confirmation", class: "col-4"  %>
-            <%= f.password_field :password_confirmation %>
+            <%= f.password_field :password_confirmation ,class: "form-control col-8"%>
         </div>
         <div class="form-group col-4">
             <%= f.submit "Create my account", class: "btn btn-primary" %>

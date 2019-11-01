@@ -1,5 +1,6 @@
 @import "bootstrap";
 
+
 .jap{font-family: 'Kosugi Maru', sans-serif; font-size:60px;}
 .tag{font-size: 16px; text-transform: uppercase; letter-spacing: 8px; color:#666;}
 body{font-family: 'Work Sans', sans-serif;background-color:#FDC544;}
@@ -58,4 +59,8 @@ a:hover{
 
 .controls a{
     color: #56473C;
+}
+
+.form-inline label{
+    justify-content: left;
 }

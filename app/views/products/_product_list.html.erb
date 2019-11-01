@@ -6,7 +6,7 @@
         <div class ="col-10 product-details">
             <h3 class="product-name"><%= link_to product.product_name, product %></h3>
             <%= link_to product.brand.name, product.brand, :class=>"brand-link" %>
-            <div class="row">
+            <div class="row" style="padding-top:8px;">
                 <div class="col-1">
                     <span>Cal</span> <%= product.calorie %> 
                 </div>
@@ -17,7 +17,7 @@
                     <span>Carb</span> <%= product.carb %>
                 </div>
                 <div class="col-1">
-                    <span>Fat</span> <%= product.fat %>
+                    <span>Fat</span><br/> <%= product.fat %>
                 </div>
             </div>
         </div>

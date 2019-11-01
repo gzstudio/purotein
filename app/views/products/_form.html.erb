@@ -1,31 +1,32 @@
-<%= form_for @product do |f| %>
-        <div class="form-group ">
+<%= form_for @product do |f|%>
+    
+        <div class="form-group form-inline">
             <%= f.label :product_name, class: "col-4" %>
-            <%= f.text_field :product_name %>
+            <%= f.text_field :product_name, class: "form-control col-8" %>
         </div>
-        <div class="form-group">
+        <div class="form-group form-inline">
             <%= f.label :brand_id, class: "col-4" %>
-            <%= f.select :brand_id, Brand.pluck(:name, :id), :include_blank => true %>
+            <%= f.select :brand_id, Brand.pluck(:name, :id), :include_blank => true , class: "col-8"%>
         </div>
-        <div class="form-group">
+        <div class="form-group form-inline">
             <%= f.label :product_image, class: "col-4" %>
             <%= f.file_field :product_image , class: "col-6"%>
         </div>
-        <div class="form-group">
+        <div class="form-group form-inline">
             <%= f.label :calorie, class: "col-4" %>
-            <%= f.text_field :calorie %>
+            <%= f.text_field :calorie , class: "form-control col-2" %>   <span style="padding-left:8px">Cal</span>
         </div>
-        <div class="form-group">
+        <div class="form-group form-inline">
             <%= f.label :protein, class: "col-4" %>
-            <%= f.text_field :protein %>
+            <%= f.text_field :protein, class: "form-control col-2" %>   <span style="padding-left:8px">Gram</span>
         </div>
-        <div class="form-group">
+        <div class="form-group form-inline">
             <%= f.label :carb, class: "col-4" %>
-            <%= f.text_field :carb %>
+            <%= f.text_field :carb ,class: "form-control col-2"%><span style="padding-left:8px">Gram</span>
         </div>        
-        <div class="form-group">
+        <div class="form-group form-inline">
             <%= f.label :fat, class: "col-4" %>
-            <%= f.text_field :fat %>
+            <%= f.text_field :fat ,class: "form-control col-2"%><span style="padding-left:8px">Gram</span>
         </div>
         <div class="form-group col-4">
             <%= f.submit "Submit", class: "btn btn-primary" %>
