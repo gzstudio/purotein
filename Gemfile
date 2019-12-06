@@ -12,7 +12,7 @@ gem 'carrierwave'
 gem 'bootstrap_form'
 
 # Use Puma as the app server
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.12'
 # Use bootstrap
 gem 'bootstrap', '~> 4.3.1'
 # Use SCSS for stylesheets
